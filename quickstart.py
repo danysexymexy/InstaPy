@@ -6,8 +6,8 @@ from selenium.common.exceptions import NoSuchElementException
 
 from instapy import InstaPy
 
-insta_username = ''
-insta_password = ''
+insta_username = 'hypelaced'
+insta_password = 'OnlineGamer'
 
 # set headless_browser=True if you want to run InstaPy on a server
 
@@ -24,21 +24,17 @@ session = InstaPy(username=insta_username,
 try:
     session.login()
 
-    # settings
-    session.set_relationship_bounds(enabled=True,
-				 potency_ratio=-1.21,
-				  delimit_by_numbers=True,
-				   max_followers=4590,
-				    max_following=5555,
-				     min_followers=45,
-				      min_following=77)
-    session.set_do_comment(True, percentage=10)
-    session.set_comments(['aMEIzing!', 'So much fun!!', 'Nicey!'])
-    session.set_dont_include(['friend1', 'friend2', 'friend3'])
-    session.set_dont_like(['pizza', 'girl'])
+    session.set_relationship_bounds(enabled=False,
+    				 potency_ratio=-1.21,
+    				  delimit_by_numbers=True,
+    				   max_followers=4590,
+    				    max_following=5555,
+    				     min_followers=45,
+    				      min_following=77)
 
-    # actions
-    session.like_by_tags(['natgeo'], amount=1)
+    # settings
+    session.follow_user_followers(['hypebeast'], amount=500, randomize=True, sleep_delay=0)
+
 
 except Exception as exc:
     # if changes to IG layout, upload the file to help us locate the change
