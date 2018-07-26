@@ -9,6 +9,13 @@ Get Started
   5. Now open terminal once again
   6. Now type 'cd' and then drag and drop the main project folder in terminal. This will read something like this: 'cd /Users/user/Downloads/Instagram-Bot-Py.git'
   7. Now you are inside the project
+  
+    ** Note: if you are in your work computer, and don't have admin access. Run a python virtual environment.
+  ``bash
+  python3 -m venv env
+  source ./env/bin/activate
+  ``
+  
   8. Run 'pip3 install selenium'
   9. Run 'pip3 install clarifai'
   10. Run 'pip3 install pyvirtualdisplay'
